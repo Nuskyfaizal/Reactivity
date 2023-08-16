@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Nusky\\Reactivities\\reactivity\\ReactivityAPI.csproj": {}
+    "D:\\Nusky\\Reactivities\\Reactivity\\ReactivityAPI.csproj": {}
   },
   "projects": {
     "D:\\Nusky\\Reactivities\\ApplicationLayer\\ApplicationLayer.csproj": {
@@ -250,14 +250,14 @@
         }
       }
     },
-    "D:\\Nusky\\Reactivities\\reactivity\\ReactivityAPI.csproj": {
+    "D:\\Nusky\\Reactivities\\Reactivity\\ReactivityAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Nusky\\Reactivities\\reactivity\\ReactivityAPI.csproj",
+        "projectUniqueName": "D:\\Nusky\\Reactivities\\Reactivity\\ReactivityAPI.csproj",
         "projectName": "ReactivityAPI",
-        "projectPath": "D:\\Nusky\\Reactivities\\reactivity\\ReactivityAPI.csproj",
+        "projectPath": "D:\\Nusky\\Reactivities\\Reactivity\\ReactivityAPI.csproj",
         "packagesPath": "C:\\Users\\NuskyF\\.nuget\\packages\\",
-        "outputPath": "D:\\Nusky\\Reactivities\\reactivity\\obj\\",
+        "outputPath": "D:\\Nusky\\Reactivities\\Reactivity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

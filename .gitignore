@@ -167,3 +167,6 @@ Reactivity/obj/Debug/net5.0/staticwebassets/ReactivityAPI.StaticWebAssets.Pack.c
 Reactivity/obj/Debug/net5.0/staticwebassets/ReactivityAPI.StaticWebAssets.Manifest.cache
 Reactivity/ReactivityAPI.csproj.user
 DomainLayer/obj/project.nuget.cache
+client-app/package-lock.json
+client-app/package-lock.json
+client-app/package.json
