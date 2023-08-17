@@ -1,20 +1,15 @@
 using ApplicationLayer.Activities;
-using ApplicationLayer.Core;
-using AutoMapper;
+using backend.Extensions;
 using FluentValidation.AspNetCore;
-using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
-using PersistenceLayer;
+using Reactivity.Extensions;
 using ReactivityAPI.Middleware;
-using System.Net;
 
 namespace Reactivity
 {
@@ -32,29 +27,17 @@ namespace Reactivity
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllers().AddFluentValidation(config =>
+            services.AddControllers(opt => 
+            {
+                var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                opt.Filters.Add(new AuthorizeFilter(policy));
+            })
+            .AddFluentValidation(config =>
             {
                 config.RegisterValidatorsFromAssemblyContaining<Create>();
-            });
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Reactivity", Version = "v1" });
-            });
-            services.AddCors(opt =>
-            {
-                opt.AddDefaultPolicy(policy =>
-               {
-                   policy.WithMethods("GET", "POST", "PUT", "DELETE").AllowAnyHeader().AllowAnyOrigin();
-               });
-            });
-            services.AddDbContext<DataContext>(opt =>
-            {
-                opt.UseSqlite(_config.GetConnectionString("DefaultConnection"));
-            });
-
-            services.AddMediatR(typeof(List.Handler).Assembly);
-            services.AddAutoMapper(typeof(MappingProfiles).Assembly);
+            });    
+            services.AddApplicationServices(_config);
+            services.AddIdentityServices(_config);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -73,6 +56,7 @@ namespace Reactivity
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseCors();
 
@@ -80,8 +64,6 @@ namespace Reactivity
             {
                 endpoints.MapControllers();
             });
-
-
         }
     }
 }

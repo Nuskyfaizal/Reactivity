@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Nusky\\Reactivities\\PersistenceLayer\\PersistenceLayer.csproj": {}
+    "d:\\Nusky\\Reactivities\\PersistenceLayer\\PersistenceLayer.csproj": {}
   },
   "projects": {
     "D:\\Nusky\\Reactivities\\DomainLayer\\DomainLayer.csproj": {
@@ -48,6 +48,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -75,14 +79,14 @@
         }
       }
     },
-    "D:\\Nusky\\Reactivities\\PersistenceLayer\\PersistenceLayer.csproj": {
+    "d:\\Nusky\\Reactivities\\PersistenceLayer\\PersistenceLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Nusky\\Reactivities\\PersistenceLayer\\PersistenceLayer.csproj",
+        "projectUniqueName": "d:\\Nusky\\Reactivities\\PersistenceLayer\\PersistenceLayer.csproj",
         "projectName": "PersistenceLayer",
-        "projectPath": "D:\\Nusky\\Reactivities\\PersistenceLayer\\PersistenceLayer.csproj",
+        "projectPath": "d:\\Nusky\\Reactivities\\PersistenceLayer\\PersistenceLayer.csproj",
         "packagesPath": "C:\\Users\\NuskyF\\.nuget\\packages\\",
-        "outputPath": "D:\\Nusky\\Reactivities\\PersistenceLayer\\obj\\",
+        "outputPath": "d:\\Nusky\\Reactivities\\PersistenceLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
