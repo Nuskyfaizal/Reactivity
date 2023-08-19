@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { Grid } from "semantic-ui-react";
-import LoadingComponent from "../../../layout/LoadingComponents";
-import { useStore } from "./../../../stores/store";
 import { observer } from "mobx-react-lite";
 import { useParams } from "react-router-dom";
 import ActivityDetailedHeader from "./ActivityDetailedHeader";
 import ActivityDetailedInfo from "./ActivityDetailedInfo";
 import ActivityDetailedChat from "./ActivityDetailedChat";
 import ActivityDetailedSidebar from "./ActivityDetailedSidebar";
+import { useStore } from "../../../app/stores/store";
+import LoadingComponent from "../../../app/layout/LoadingComponents";
 
 function ActivityDetails() {
   const { activityStore } = useStore();

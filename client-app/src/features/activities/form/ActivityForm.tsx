@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Button, Header, Segment } from "semantic-ui-react";
-import { useStore } from "./../../../stores/store";
 import { observer } from "mobx-react-lite";
 import { Link, useHistory, useParams } from "react-router-dom";
-import LoadingComponent from "../../../layout/LoadingComponents";
 import { v4 as uuid } from "uuid";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import MyTextInput from "../../../common/form/MyTextInput";
-import MyTextArea from "../../../common/form/MyTextArea";
-import MySelectInput from "../../../common/form/MySelectInput";
-import { catergoryOptions } from "../../../common/options/catergoryOptions";
-import MyDateInput from "../../../common/form/MyDateInput";
-import { Activity } from "../../../models/activity";
+import { useStore } from "../../../app/stores/store";
+import { Activity } from "../../../app/models/activity";
+import MyDateInput from "../../../app/common/form/MyDateInput";
+import MySelectInput from "../../../app/common/form/MySelectInput";
+import MyTextArea from "../../../app/common/form/MyTextArea";
+import MyTextInput from "../../../app/common/form/MyTextInput";
+import { catergoryOptions } from "../../../app/common/options/catergoryOptions";
+import LoadingComponent from "../../../app/layout/LoadingComponents";
 
 function ActivityForm() {
   const history = useHistory();

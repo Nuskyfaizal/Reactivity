@@ -2,17 +2,17 @@ import { observer } from "mobx-react-lite";
 import * as React from "react";
 import { useEffect } from "react";
 import { Grid } from "semantic-ui-react";
-import LoadingComponent from "../../../layout/LoadingComponents";
-import { useStore } from "../../../stores/store";
 import ActivityList from "./ActivityList";
-import ActivityFilters from './ActivityFilters';
+import ActivityFilters from "./ActivityFilters";
+import LoadingComponent from "../../../app/layout/LoadingComponents";
+import { useStore } from "../../../app/stores/store";
 
 function ActivityDashboard() {
   const { activityStore } = useStore();
-  const {loadActivities, activityRegistry} = activityStore
+  const { loadActivities, activityRegistry } = activityStore;
 
   useEffect(() => {
-    if(activityRegistry.size <= 1) loadActivities();
+    if (activityRegistry.size <= 1) loadActivities();
   }, [activityRegistry.size, loadActivities]);
 
   if (activityStore.loadingInitial)
@@ -24,7 +24,7 @@ function ActivityDashboard() {
         <ActivityList />
       </Grid.Column>
       <Grid.Column width="6">
-       <ActivityFilters/>
+        <ActivityFilters />
       </Grid.Column>
     </Grid>
   );

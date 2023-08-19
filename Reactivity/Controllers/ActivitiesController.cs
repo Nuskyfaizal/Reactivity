@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace ReactivityAPI.Controllers
 { 
+    [AllowAnonymous]
     public class ActivitiesController : BaseApiController
     {
         [HttpGet]
