@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using ApplicationLayer.Profiles;
 
-namespace DomainLayer
+namespace ApplicationLayer.Activities
 {
-    public class Activity
+    public class ActivityDto
     {
         public Guid Id { get; set; }
         public string Title { get; set; }
@@ -13,6 +14,7 @@ namespace DomainLayer
         public string City { get; set; }
         public string Venue { get; set; }
         public bool IsCancelled { get; set; }
-        public ICollection<ActivityAttendee> Attendees { get; set; } = new List<ActivityAttendee>();
+        public string HostUsername { get; set; }
+        public ICollection<Profile> Attendees { get; set; }
     }
 }

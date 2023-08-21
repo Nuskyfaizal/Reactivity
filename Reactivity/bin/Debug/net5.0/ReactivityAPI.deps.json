@@ -34,6 +34,7 @@
       "ReactivityAPI/1.0.0": {
         "dependencies": {
           "ApplicationLayer": "1.0.0",
+          "Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.1",
           "Microsoft.EntityFrameworkCore.Design": "5.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.1",
@@ -1036,6 +1037,17 @@
         },
         "compile": {
           "DomainLayer.dll": {}
+        }
+      },
+      "Infrastructure/1.0.0": {
+        "dependencies": {
+          "ApplicationLayer": "1.0.0"
+        },
+        "runtime": {
+          "Infrastructure.dll": {}
+        },
+        "compile": {
+          "Infrastructure.dll": {}
         }
       },
       "PersistenceLayer/1.0.0": {
@@ -3187,6 +3199,11 @@
       "sha512": ""
     },
     "DomainLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
