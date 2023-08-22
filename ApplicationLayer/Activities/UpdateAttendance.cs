@@ -57,8 +57,8 @@ namespace ApplicationLayer.Activities
                         IsHost = false
                     };
 
-                    //activity.Attendees.Add(attendance);
-                    _context.ActivityAttendees.Add(attendance);
+                    activity.Attendees.Add(attendance);
+                    //_context.ActivityAttendees.Add(attendance);
                 }
 
                 var result = await _context.SaveChangesAsync() > 0;

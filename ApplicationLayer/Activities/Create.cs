@@ -47,8 +47,8 @@ namespace ApplicationLayer.Activities
                     IsHost = true
                 };
 
-                _context.ActivityAttendees.Add(attendee);
-                //request.Activity.Attendees.Add(attendee);
+                //_context.ActivityAttendees.Add(attendee);
+                request.Activity.Attendees.Add(attendee);
 
                 _context.Activities.Add(request.Activity);
 

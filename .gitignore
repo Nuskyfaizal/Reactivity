@@ -219,3 +219,5 @@ Infrastructure/obj/Debug/net5.0/ref/Infrastructure.dll
 Infrastructure/obj/Debug/net5.0/refint/Infrastructure.dll
 Reactivity/bin/Debug/net5.0/Infrastructure.dll
 Reactivity/bin/Debug/net5.0/Infrastructure.pdb
+Reactivity/appsettings.json
+Reactivity/bin/Debug/net5.0/CloudinaryDotNet.dll

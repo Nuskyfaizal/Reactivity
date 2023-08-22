@@ -359,6 +359,20 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "CloudinaryDotNet/1.14.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.2"
+        },
+        "runtime": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {
+            "assemblyVersion": "1.14.0.0",
+            "fileVersion": "1.14.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {}
+        }
+      },
       "FluentValidation/9.3.0": {
         "runtime": {
           "lib/net5.0/FluentValidation.dll": {
@@ -1041,7 +1055,8 @@
       },
       "Infrastructure/1.0.0": {
         "dependencies": {
-          "ApplicationLayer": "1.0.0"
+          "ApplicationLayer": "1.0.0",
+          "CloudinaryDotNet": "1.14.0"
         },
         "runtime": {
           "Infrastructure.dll": {}
@@ -2751,6 +2766,13 @@
       "sha512": "sha512-dQyGCAYcHbGuimVvCMu4Ea2S1oYOlgO9XfVdClmY5wgygJMZoS57emPzH0qNfknmtzMm4QbDO9i237W5IDjU1A==",
       "path": "automapper.extensions.microsoft.dependencyinjection/8.1.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512"
+    },
+    "CloudinaryDotNet/1.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-d6bAnrCc6iQ1pIMepR+krE0CgJoVRH2/uLPHZpZ5QY4zyqkLehwDocqWHFaLlkZJFUdEWLBianHrFitGdyQkcQ==",
+      "path": "cloudinarydotnet/1.14.0",
+      "hashPath": "cloudinarydotnet.1.14.0.nupkg.sha512"
     },
     "FluentValidation/9.3.0": {
       "type": "package",
