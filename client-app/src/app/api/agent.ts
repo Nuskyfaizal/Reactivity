@@ -1,10 +1,10 @@
 import axios, { AxiosError, AxiosResponse } from "axios";
 import { toast } from "react-toastify";
 import { Activity, ActivityFormValues } from "./../models/activity";
-import { history } from "../..";
 import { store } from "../stores/store";
 import { User, UserFormValues } from "../models/user";
 import { Photo, Profile } from "../models/profile";
+import { router } from "../router/Routes";
 
 const sleep = (delay: number) => {
   return new Promise((resolve) => {
@@ -34,7 +34,7 @@ axios.interceptors.response.use(
           toast.error(data);
         }
         if (config.method === "get" && data.errors.hasOwnProperty("id")) {
-          history.push("/not-found");
+          router.navigate("/not-found");
         }
         if (data.errors) {
           const modalStateErrors = [];
@@ -50,11 +50,11 @@ axios.interceptors.response.use(
         toast.error("unauthorized");
         break;
       case 404:
-        history.push("/not-found");
+        router.navigate("/not-found");
         break;
       case 500:
         store.commonStore.setServerError(data);
-        history.push("/server-error");
+        router.navigate("/server-error");
         break;
     }
     return Promise.reject(error);
@@ -89,7 +89,7 @@ const Account = {
 };
 
 const Profiles = {
-  get: (username: string) => requests.get<Profile>(`/activities/${username}`),
+  get: (username: string) => requests.get<Profile>(`/profiles/${username}`),
   uploadPhoto: (file: Blob) => {
     let formData = new FormData();
     formData.append('File', file)
@@ -98,7 +98,10 @@ const Profiles = {
     })
   },
   setMainPhoto: (id:string) => requests.post(`/photos/${id}/setMain`, {}),
-  deletePhoto: (id:string) => requests.del(`/photos/${id}`)
+  deletePhoto: (id:string) => requests.del(`/photos/${id}`),
+  updateFollowing: (username: string) => requests.post(`/follow/${username}`, {}),
+  listFollowings: (username: string, predicate: string) => 
+    requests.get<Profile[]>(`/follow/${username}?predicate=${predicate}`)
 };
 
 const agent = {

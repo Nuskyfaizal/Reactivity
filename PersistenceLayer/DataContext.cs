@@ -1,7 +1,6 @@
 ﻿using DomainLayer;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace PersistenceLayer
 {
@@ -15,6 +14,7 @@ namespace PersistenceLayer
         public DbSet<ActivityAttendee> ActivityAttendees { get; set; }
         public DbSet<Photo> Photos { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<UserFollowing> UserFollowings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -35,6 +35,20 @@ namespace PersistenceLayer
             builder.Entity<Comment>()
                 .HasOne(a => a.Activity)
                 .WithMany(c => c.Comments)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Entity<UserFollowing>(x => x.HasKey(aa => new { aa.ObserverId, aa.TargetId }));
+
+            builder.Entity<UserFollowing>()
+                .HasOne(o => o.Observer)
+                .WithMany(f => f.Followings)
+                .HasForeignKey(k => k.ObserverId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Entity<UserFollowing>()
+                .HasOne(t => t.Target)
+                .WithMany(f => f.Followers)
+                .HasForeignKey(k => k.TargetId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

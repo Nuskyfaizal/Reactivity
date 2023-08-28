@@ -59,7 +59,7 @@ namespace Reactivity
 
             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseCors();
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {

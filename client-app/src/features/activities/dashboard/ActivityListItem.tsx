@@ -29,7 +29,7 @@ function ActivityListItem({ activity }: Props) {
                 {activity.title}
               </Item.Header>
               <Item.Description>
-                Hosted by <Link to={`/profiles/${activity.hostUserName}`}>{activity.host?.displayName}</Link> 
+                Hosted by <Link to={`/profiles/${activity.host?.displayName}`}>{activity.host?.displayName}</Link> 
               </Item.Description>
               {activity.isHost && (
                 <Item.Description>
@@ -40,7 +40,7 @@ function ActivityListItem({ activity }: Props) {
               )}
               {activity.isGoing && !activity.isHost && (
                 <Item.Description>
-                  <Label basic color="orange">
+                  <Label basic color="green">
                     You are going to this activity
                   </Label>
                 </Item.Description>

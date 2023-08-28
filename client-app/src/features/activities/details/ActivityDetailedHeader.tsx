@@ -27,6 +27,7 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
   const {
     activityStore: { updateAttendence, loading, cancelActivityToggle },
   } = useStore();
+  
   return (
     <Segment.Group>
       <Segment basic attached="top" style={{ padding: "0" }}>
@@ -54,12 +55,7 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                 />
                 <p>{format(activity.date!, "dd MMM yyyy")}</p>
                 <p>
-                  Hosted by{" "}
-                  <strong>
-                    <Link to={`/profiles/${activity.host?.username}`}>
-                      {activity.host?.displayName}
-                    </Link>
-                  </strong>
+                  Hosted by <strong><Link to={`/profiles/${activity.hostUserName}`}>{activity.hostUserName}</Link></strong>
                 </p>
               </Item.Content>
             </Item>

@@ -221,3 +221,5 @@ Reactivity/bin/Debug/net5.0/Infrastructure.dll
 Reactivity/bin/Debug/net5.0/Infrastructure.pdb
 Reactivity/appsettings.json
 Reactivity/bin/Debug/net5.0/CloudinaryDotNet.dll
+Reactivity/activity.db-shm
+Reactivity/activity.db-wal

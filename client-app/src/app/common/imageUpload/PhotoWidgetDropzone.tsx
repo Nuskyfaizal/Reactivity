@@ -28,7 +28,7 @@ export default function PhotoWidgetDropZone({ setFiles }: Props) {
         })
       )
     );
-  }, []);
+  }, [setFiles]);
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   return (

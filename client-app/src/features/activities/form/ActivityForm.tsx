@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Header, Segment } from "semantic-ui-react";
 import { observer } from "mobx-react-lite";
-import { Link, useHistory, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
@@ -15,30 +15,30 @@ import { catergoryOptions } from "../../../app/common/options/catergoryOptions";
 import LoadingComponent from "../../../app/layout/LoadingComponents";
 
 function ActivityForm() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const { activityStore } = useStore();
-  const {
-    createActivity,
-    updateActivity,
-    loading,
-    loadActivity,
-    loadingInitial,
-  } = activityStore;
+  const { createActivity, updateActivity, loadActivity, loadingInitial } =
+    activityStore;
   const { id } = useParams<{ id: string }>();
 
-  const [activity, setActivity] = useState<ActivityFormValues>(new ActivityFormValues());
+  const [activity, setActivity] = useState<ActivityFormValues>(
+    new ActivityFormValues()
+  );
 
   const validationSchema = Yup.object({
     title: Yup.string().required("The activity title is required"),
     description: Yup.string().required("The activity description is required"),
     category: Yup.string().required(),
-    date: Yup.string().required('Date is Required').nullable(),
+    date: Yup.string().required("Date is Required").nullable(),
     venue: Yup.string().required(),
     city: Yup.string().required(),
   });
 
   useEffect(() => {
-    if (id) loadActivity(id).then((activity) => setActivity(new ActivityFormValues(activity)));
+    if (id)
+      loadActivity(id).then((activity) =>
+        setActivity(new ActivityFormValues(activity))
+      );
   }, [id, loadActivity]);
 
   function handleFormSubmit(activity: ActivityFormValues) {
@@ -48,11 +48,11 @@ function ActivityForm() {
         id: uuid(),
       };
       createActivity(newActivity).then(() =>
-        history.push(`/activities/${newActivity.id}`)
+        navigate(`/activities/${newActivity.id}`)
       );
     } else {
       updateActivity(activity).then(() =>
-        history.push(`/activities/${activity.id}`)
+        navigate(`/activities/${activity.id}`)
       );
     }
   }

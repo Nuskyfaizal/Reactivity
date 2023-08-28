@@ -1,10 +1,10 @@
 ﻿using ApplicationLayer.Core;
+using ApplicationLayer.Interfaces;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using PersistenceLayer;
-using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -19,9 +19,11 @@ namespace ApplicationLayer.Activities
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
+        private readonly IUserAccesor _userAccesor;
 
-            public Handler(DataContext context, IMapper mapper)
+            public Handler(DataContext context, IMapper mapper, IUserAccesor userAccesor)
             {
+                _userAccesor = userAccesor;
                 _mapper = mapper;
                 _context = context;
             }
@@ -29,7 +31,8 @@ namespace ApplicationLayer.Activities
             public async Task<Result<List<ActivityDto>>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var activities = await _context.Activities
-                    .ProjectTo<ActivityDto>(_mapper.ConfigurationProvider)
+                    .ProjectTo<ActivityDto>(_mapper.ConfigurationProvider, 
+                        new{currentUserName = _userAccesor.GetUsername()})
                     .ToListAsync(cancellationToken);
                     
                 return Result<List<ActivityDto>>.Success(activities);
