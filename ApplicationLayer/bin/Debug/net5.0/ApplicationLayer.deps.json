@@ -125,7 +125,7 @@
       },
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore/5.0.1": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.1",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.2",
           "Microsoft.Extensions.Identity.Stores": "5.0.1"
         },
         "runtime": {
@@ -155,38 +155,38 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore/5.0.1": {
+      "Microsoft.EntityFrameworkCore/5.0.2": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "5.0.1",
-          "Microsoft.EntityFrameworkCore.Analyzers": "5.0.1",
+          "Microsoft.EntityFrameworkCore.Abstractions": "5.0.2",
+          "Microsoft.EntityFrameworkCore.Analyzers": "5.0.2",
           "Microsoft.Extensions.Caching.Memory": "5.0.0",
           "Microsoft.Extensions.DependencyInjection": "5.0.1",
           "Microsoft.Extensions.Logging": "5.0.0",
           "System.Collections.Immutable": "5.0.0",
           "System.ComponentModel.Annotations": "5.0.0",
-          "System.Diagnostics.DiagnosticSource": "5.0.0"
+          "System.Diagnostics.DiagnosticSource": "5.0.1"
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.dll": {
-            "assemblyVersion": "5.0.1.0",
-            "fileVersion": "5.0.120.57509"
+            "assemblyVersion": "5.0.2.0",
+            "fileVersion": "5.0.220.61114"
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/5.0.1": {
+      "Microsoft.EntityFrameworkCore.Abstractions/5.0.2": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Abstractions.dll": {
-            "assemblyVersion": "5.0.1.0",
-            "fileVersion": "5.0.120.57509"
+            "assemblyVersion": "5.0.2.0",
+            "fileVersion": "5.0.220.61114"
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/5.0.1": {},
+      "Microsoft.EntityFrameworkCore.Analyzers/5.0.2": {},
       "Microsoft.EntityFrameworkCore.Design/5.0.1": {
         "dependencies": {
           "Humanizer.Core": "2.8.26",
           "Microsoft.CSharp": "4.7.0",
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.1"
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.2"
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {
@@ -195,15 +195,15 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/5.0.1": {
+      "Microsoft.EntityFrameworkCore.Relational/5.0.2": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "5.0.1",
+          "Microsoft.EntityFrameworkCore": "5.0.2",
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0"
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.dll": {
-            "assemblyVersion": "5.0.1.0",
-            "fileVersion": "5.0.120.57509"
+            "assemblyVersion": "5.0.2.0",
+            "fileVersion": "5.0.220.61114"
           }
         }
       },
@@ -217,7 +217,7 @@
         "dependencies": {
           "Microsoft.Data.Sqlite.Core": "5.0.1",
           "Microsoft.DotNet.PlatformAbstractions": "3.1.6",
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.1",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.2",
           "Microsoft.Extensions.DependencyModel": "5.0.0"
         },
         "runtime": {
@@ -313,6 +313,31 @@
         }
       },
       "Microsoft.Extensions.Primitives/5.0.0": {},
+      "Npgsql/5.0.2": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.6.0"
+        },
+        "runtime": {
+          "lib/net5.0/Npgsql.dll": {
+            "assemblyVersion": "5.0.2.0",
+            "fileVersion": "5.0.2.0"
+          }
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL/5.0.2": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.2",
+          "Microsoft.EntityFrameworkCore.Abstractions": "5.0.2",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.2",
+          "Npgsql": "5.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
+            "assemblyVersion": "5.0.2.0",
+            "fileVersion": "5.0.2.0"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.0.4": {
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.4",
@@ -423,9 +448,17 @@
       },
       "System.Collections.Immutable/5.0.0": {},
       "System.ComponentModel.Annotations/5.0.0": {},
-      "System.Diagnostics.DiagnosticSource/5.0.0": {},
+      "System.Diagnostics.DiagnosticSource/5.0.1": {
+        "runtime": {
+          "lib/net5.0/System.Diagnostics.DiagnosticSource.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.220.61120"
+          }
+        }
+      },
       "System.Memory/4.5.3": {},
       "System.Reflection.Emit/4.7.0": {},
+      "System.Runtime.CompilerServices.Unsafe/4.6.0": {},
       "DomainLayer/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.1"
@@ -437,7 +470,8 @@
       "PersistenceLayer/1.0.0": {
         "dependencies": {
           "DomainLayer": "1.0.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.1"
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.1",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.2"
         },
         "runtime": {
           "PersistenceLayer.dll": {}
@@ -549,26 +583,26 @@
       "path": "microsoft.dotnet.platformabstractions/3.1.6",
       "hashPath": "microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore/5.0.1": {
+    "Microsoft.EntityFrameworkCore/5.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bz4WSbLqNw9gGeHw8VAzCcX6TVDLAD/SZRii9G7XSsqAdLL2J8pVINemXfRUt5IHlC1yWC5To4PzAUWJJZCbYw==",
-      "path": "microsoft.entityframeworkcore/5.0.1",
-      "hashPath": "microsoft.entityframeworkcore.5.0.1.nupkg.sha512"
+      "sha512": "sha512-N2OZJWngaR5ydwdp2YH18ag3LN9DK0iCBPJyJ1DNSlI1rSZqmYmtOdPHoM6Wwwvbkw1WVhVQ/1w/8zr4h74EPg==",
+      "path": "microsoft.entityframeworkcore/5.0.2",
+      "hashPath": "microsoft.entityframeworkcore.5.0.2.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/5.0.1": {
+    "Microsoft.EntityFrameworkCore.Abstractions/5.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BUc5mbxnraD5mfpOUHaluHYV1Umqpv7VzsXwnVEvmDBtoLZ2jo+y1ldv5Xq6nab0STJQEX8YaZdbJmTIZUHwtQ==",
-      "path": "microsoft.entityframeworkcore.abstractions/5.0.1",
-      "hashPath": "microsoft.entityframeworkcore.abstractions.5.0.1.nupkg.sha512"
+      "sha512": "sha512-69nxyTJwzua85QQB7TWrxCyzHvDwjYWzGLKIQVoLGLd5zG4ApJYMyMGllHGf8pmYiQ6FS7MBZuAwONSv62nkhQ==",
+      "path": "microsoft.entityframeworkcore.abstractions/5.0.2",
+      "hashPath": "microsoft.entityframeworkcore.abstractions.5.0.2.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/5.0.1": {
+    "Microsoft.EntityFrameworkCore.Analyzers/5.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3WjoY8JlB7m/VApD5A4JlntFLGV2C1qOV9fiPZQNBwlNnNAVZemDVZAksN1yBVMoPqw87VaogbP5sxgptCwTFA==",
-      "path": "microsoft.entityframeworkcore.analyzers/5.0.1",
-      "hashPath": "microsoft.entityframeworkcore.analyzers.5.0.1.nupkg.sha512"
+      "sha512": "sha512-kh5B6Hs2dQ7kBuUXXGAfJAZovJDEXMlO3r/xBnkaRqItlvY+TLUvAY+MXTOfX96lx4SxsrecZ2vnHs4D26nedA==",
+      "path": "microsoft.entityframeworkcore.analyzers/5.0.2",
+      "hashPath": "microsoft.entityframeworkcore.analyzers.5.0.2.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Design/5.0.1": {
       "type": "package",
@@ -577,12 +611,12 @@
       "path": "microsoft.entityframeworkcore.design/5.0.1",
       "hashPath": "microsoft.entityframeworkcore.design.5.0.1.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Relational/5.0.1": {
+    "Microsoft.EntityFrameworkCore.Relational/5.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ItzAKJH2KGeYVo9csLQz0D7TjJGEG9N5wd/HVF2E+RXxOZuTKZUBO7Ft+SntVvx7DOX7tKLQOleXutf0Vnds1Q==",
-      "path": "microsoft.entityframeworkcore.relational/5.0.1",
-      "hashPath": "microsoft.entityframeworkcore.relational.5.0.1.nupkg.sha512"
+      "sha512": "sha512-1bisryvgZWcc+jkgksUH7cBkqOSXqyaC7HCAte0Yy+RHzt903KERsTJ447K+HNkW3bVt5GV/VAEcSN2ywqU9wg==",
+      "path": "microsoft.entityframeworkcore.relational/5.0.2",
+      "hashPath": "microsoft.entityframeworkcore.relational.5.0.2.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Sqlite/5.0.1": {
       "type": "package",
@@ -689,6 +723,20 @@
       "path": "microsoft.extensions.primitives/5.0.0",
       "hashPath": "microsoft.extensions.primitives.5.0.0.nupkg.sha512"
     },
+    "Npgsql/5.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bqsG+0t6+c7nfpunu08HkjeRZCI2g8EbXNtWUHsnFlDzjx0zsLkvzfByiHuYo9a74CMKR9RmxRu7HiPGCE/EvQ==",
+      "path": "npgsql/5.0.2",
+      "hashPath": "npgsql.5.0.2.nupkg.sha512"
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL/5.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xdhI0Y1uMxEUbH00T9kLk5m4JN8b4bAHv8fX+nU3GzdEsIgI0k0tKM4ZJ/RjkvGE1L5h4Y+oBZNNqzgetOTBtg==",
+      "path": "npgsql.entityframeworkcore.postgresql/5.0.2",
+      "hashPath": "npgsql.entityframeworkcore.postgresql.5.0.2.nupkg.sha512"
+    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.0.4": {
       "type": "package",
       "serviceable": true,
@@ -731,12 +779,12 @@
       "path": "system.componentmodel.annotations/5.0.0",
       "hashPath": "system.componentmodel.annotations.5.0.0.nupkg.sha512"
     },
-    "System.Diagnostics.DiagnosticSource/5.0.0": {
+    "System.Diagnostics.DiagnosticSource/5.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tCQTzPsGZh/A9LhhA6zrqCRV4hOHsK90/G7q3Khxmn6tnB1PuNU0cRaKANP2AWcF9bn0zsuOoZOSrHuJk6oNBA==",
-      "path": "system.diagnostics.diagnosticsource/5.0.0",
-      "hashPath": "system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512"
+      "sha512": "sha512-uXQEYqav2V3zP6OwkOKtLv+qIi6z3m1hsGyKwXX7ZA7htT4shoVccGxnJ9kVRFPNAsi1ArZTq2oh7WOto6GbkQ==",
+      "path": "system.diagnostics.diagnosticsource/5.0.1",
+      "hashPath": "system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
     },
     "System.Memory/4.5.3": {
       "type": "package",
@@ -751,6 +799,13 @@
       "sha512": "sha512-VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
       "path": "system.reflection.emit/4.7.0",
       "hashPath": "system.reflection.emit.4.7.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HxozeSlipUK7dAroTYwIcGwKDeOVpQnJlpVaOkBz7CM4TsE5b/tKlQBZecTjh6FzcSbxndYaxxpsBMz+wMJeyw==",
+      "path": "system.runtime.compilerservices.unsafe/4.6.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
     },
     "DomainLayer/1.0.0": {
       "type": "project",

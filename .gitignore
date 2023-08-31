@@ -223,3 +223,10 @@ Reactivity/appsettings.json
 Reactivity/bin/Debug/net5.0/CloudinaryDotNet.dll
 Reactivity/activity.db-shm
 Reactivity/activity.db-wal
+Reactivity/bin/Debug/net5.0/Npgsql.dll
+Reactivity/bin/Debug/net5.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+Reactivity/bin/Debug/net5.0/System.Diagnostics.DiagnosticSource.dll
+Reactivity/obj/Debug/net5.0/staticwebassets/msbuild.build.ReactivityAPI.props
+Reactivity/obj/Debug/net5.0/staticwebassets/msbuild.buildTransitive.ReactivityAPI.props
+Reactivity/obj/Debug/net5.0/staticwebassets/msbuild.buildMultiTargeting.ReactivityAPI.props
+Reactivity/obj/Debug/net5.0/staticwebassets/msbuild.ReactivityAPI.Microsoft.AspNetCore.StaticWebAssets.props

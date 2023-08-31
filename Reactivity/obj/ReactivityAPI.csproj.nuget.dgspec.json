@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Nusky\\Reactivities\\Reactivity\\ReactivityAPI.csproj": {}
+    "D:\\Nusky\\Reactivities\\reactivity\\ReactivityAPI.csproj": {}
   },
   "projects": {
     "D:\\Nusky\\Reactivities\\ApplicationLayer\\ApplicationLayer.csproj": {
@@ -305,6 +305,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.1, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             }
           },
           "imports": [
@@ -327,14 +331,14 @@
         }
       }
     },
-    "D:\\Nusky\\Reactivities\\Reactivity\\ReactivityAPI.csproj": {
+    "D:\\Nusky\\Reactivities\\reactivity\\ReactivityAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Nusky\\Reactivities\\Reactivity\\ReactivityAPI.csproj",
+        "projectUniqueName": "D:\\Nusky\\Reactivities\\reactivity\\ReactivityAPI.csproj",
         "projectName": "ReactivityAPI",
-        "projectPath": "D:\\Nusky\\Reactivities\\Reactivity\\ReactivityAPI.csproj",
+        "projectPath": "D:\\Nusky\\Reactivities\\reactivity\\ReactivityAPI.csproj",
         "packagesPath": "C:\\Users\\NuskyF\\.nuget\\packages\\",
-        "outputPath": "D:\\Nusky\\Reactivities\\Reactivity\\obj\\",
+        "outputPath": "D:\\Nusky\\Reactivities\\reactivity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -401,6 +405,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
