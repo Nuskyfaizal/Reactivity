@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using ApplicationLayer.Profiles;
 
 namespace ApplicationLayer.Activities
 {

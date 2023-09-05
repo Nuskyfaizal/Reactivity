@@ -1,5 +1,4 @@
 ﻿using ApplicationLayer.Activities;
-using ApplicationLayer.Core;
 using DomainLayer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

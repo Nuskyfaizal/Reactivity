@@ -78,12 +78,14 @@ namespace Reactivity
 
             app.UseRouting();
 
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
-
+            app.UseCors("CorsPolicy");
+            
             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseCors("CorsPolicy");
+
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+          
 
             app.UseEndpoints(endpoints =>
             {

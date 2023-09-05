@@ -2,7 +2,6 @@
 using ApplicationLayer.Interfaces;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using DomainLayer;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using PersistenceLayer;

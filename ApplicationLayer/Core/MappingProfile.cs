@@ -1,7 +1,6 @@
 ﻿using ApplicationLayer.Activities;
 using ApplicationLayer.Comments;
 using ApplicationLayer.Profiles;
-using AutoMapper;
 using DomainLayer;
 using System.Linq;
 
